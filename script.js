@@ -68,26 +68,6 @@ const carModels = {
         },
         exposure: "0.3"
     },
-    model3: {
-        src: "/models/MS_CIAZ/scene.gltf",
-        paintIndices: [13,55,7,6,5,4,17,11,16],
-        scale: "1 1 1",
-        cameraSettings: {
-          orbit1: "180deg 75deg 1.5m",
-          orbit2: "120deg 75deg 1.5m",
-          orbit3: "224deg 75deg 1.5m",
-          mobileOrbit1: "180deg 75deg 1.5m",
-          mobileOrbit2: "120deg 75deg 1.5m",
-          mobileOrbit3: "224deg 75deg 1.5m",
-          target1: "0m 0.35m 0m",
-          target2: "0.2m 0.6m -1.5m",
-          target3: "-0.5m 0.9m -1.0m",
-          mobileTarget1: "0m 0.15m 0m",
-          mobileTarget2: "2.8m 1.0m -1.7m",
-          mobileTarget3: "-1.5m 1.0m -1.7m"
-        },
-        exposure:"0.5"
-      },
 };
 
 
@@ -216,24 +196,6 @@ function loadCarModel(modelKey) {
         
         window.carPaint1 = materials[currentModel.paintIndices[0]];
         window.carPaint2 = materials[currentModel.paintIndices[1]];
-        if(carModelSelector.value=="model3"){
-          const color="#000000";
-        window.carPaint3 = materials[currentModel.paintIndices[2]];
-        window.carPaint4 = materials[currentModel.paintIndices[3]];
-        window.carPaint5 = materials[currentModel.paintIndices[4]];
-        window.carPaint6 = materials[currentModel.paintIndices[5]];
-        window.carPaint7 = materials[currentModel.paintIndices[6]];
-        window.carPaint8 = materials[currentModel.paintIndices[7]];
-        window.carPaint9 = materials[currentModel.paintIndices[8]];
-        window.carPaint3.pbrMetallicRoughness.setBaseColorFactor(color);
-        window.carPaint4.pbrMetallicRoughness.setBaseColorFactor(color);
-        window.carPaint5.pbrMetallicRoughness.setBaseColorFactor(color);
-        window.carPaint6.pbrMetallicRoughness.setBaseColorFactor(color);
-        window.carPaint7.pbrMetallicRoughness.setBaseColorFactor(color);
-        window.carPaint8.pbrMetallicRoughness.setBaseColorFactor(color);
-        window.carPaint9.pbrMetallicRoughness.setBaseColorFactor(color);
-        dontknow.innerText="CIAZ";
-        }
         if(carModelSelector.value=="model2"){
             dontknow.innerText="SWIFT";
         }
